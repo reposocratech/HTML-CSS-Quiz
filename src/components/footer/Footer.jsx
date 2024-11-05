@@ -4,21 +4,22 @@ export const Footer = () => {
   return (
     <footer>
       <p>
-        Creado por {''}
+        Creado por
         <a
           href="https://www.linkedin.com/in/sergio-jim%C3%A9nez-rubio/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Sergio Jiménez Rubio {''}
+          Sergio Jiménez Rubio
         </a>
-        en {''}
+        en
         <a
           href="https://socratech.es"
           rel="noopener noreferrer"
           target="_blank"
         >
           SocraTech
+          <img src="./images/Logo-SocraTech.webp" alt="Logo de SocraTech" />
         </a>
       </p>
     </footer>
