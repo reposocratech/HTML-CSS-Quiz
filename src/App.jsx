@@ -15,12 +15,11 @@ const Quiz = () => {
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
 
-  console.log(score);
-
-
   const selectOption = (id) => {
     const { correctAnswer } = questions[currentQuestion];
     const isCorrect = id === correctAnswer;
+
+    setUserAnswers((prevUserAnswers) => [...prevUserAnswers, id]);
 
     if (isCorrect) {
       confetti({
@@ -30,16 +29,14 @@ const Quiz = () => {
       setScore((score) => score + 1);
     }
 
-    setUserAnswers((userAnswers) => [...userAnswers, id]);
     setSelectedOption(id);
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setCompleted(true);
-    }
+    currentQuestion < questions.length - 1
+      ? setCurrentQuestion(currentQuestion + 1)
+      : setCompleted(true);
+
     setSelectedOption(null);
   };
 
