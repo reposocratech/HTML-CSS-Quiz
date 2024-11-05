@@ -9,8 +9,9 @@
 
   .dots {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    column-gap: 0.5rem;
+    column-gap: 0.6rem;
 
     .dot {
       display: grid;
@@ -18,6 +19,7 @@
       width: 1.5rem;
       aspect-ratio: 1;
       border-radius: 50%;
+      font-size: 0.8rem;
 
       &.correct {
         background-color: var(--correct-color);
