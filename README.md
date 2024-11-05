@@ -1,8 +1,14 @@
-# React + Vite
+# Quiz de HTML y CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este juego es un desafiante quiz diseñado para poner a prueba tus conocimientos en HTML y CSS, dos de los lenguajes fundamentales en el desarrollo web. Perfecto para principiantes que quieren evaluar su progreso o para desarrolladores experimentados que desean refrescar sus habilidades.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Características principales:
+
+- Preguntas variadas que cubren desde conceptos básicos hasta avanzados de HTML y CSS.
+- Interfaz intuitiva y fácil de usar.
+- Retroalimentación inmediata después de cada respuesta.
+- Puntuación final para medir tu rendimiento.
+
+¡Pon a prueba tus habilidades en maquetación web y descubre cuánto sabes realmente sobre HTML y CSS!
