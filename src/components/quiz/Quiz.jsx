@@ -1,6 +1,8 @@
 import { InfoIcon } from '../icons/InfoIcon';
 import { marked } from 'marked';
 
+import './quiz.css';
+
 export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, handleNext, handlePrevious}) => {
   return (
     <article className="quiz">
