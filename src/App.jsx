@@ -14,21 +14,19 @@ const Quiz = () => {
   const [userAnswers, setUserAnswers] = useState([]);
 
   const selectOption = (id) => {
-    const correctAnswer = questions[currentQuestion].correctAnswer;
+    const { correctAnswer } = questions[currentQuestion];
     const isCorrect = id === correctAnswer;
 
     if (isCorrect) {
       confetti();
-      setScore(score + 1);
+      setScore((score) => score + 1);
     }
 
     setSelectedOption(id);
   };
 
   const handleNext = (selectedOption) => {
-    const newUserAnswers = [...userAnswers];
-    newUserAnswers[currentQuestion] = selectedOption;
-    setUserAnswers(newUserAnswers);
+    setUserAnswers((userAnswers) => [...userAnswers, selectedOption]);
 
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -49,8 +47,8 @@ const Quiz = () => {
     <>
       <main>
         {completed ? (
-          <article className="quiz">
-            <h2>Quiz Finalizado</h2>
+          <article className="quiz final">
+            <h2>¡Quiz Finalizado!</h2>
             <p>
             Puntuación: {score} de {questions.length}
             </p>
@@ -103,12 +101,16 @@ const Quiz = () => {
               {currentQuestion > 0 && (
                 <button onClick={handlePrevious}>Anterior</button>
               )}
+
               <button
                 className={`${selectedOption === null ? 'disabled' : ''}`}
                 disabled={selectedOption === null}
                 onClick={() => handleNext(selectedOption)}
               >
-              Siguiente
+                {currentQuestion === questions.length - 1
+                  ? 'Finalizar'
+                  : 'Siguiente'
+                }
               </button>
             </div>
           </article>
