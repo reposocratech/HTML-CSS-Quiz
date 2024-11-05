@@ -47,6 +47,14 @@ const Quiz = () => {
     }
   };
 
+  const handleRestart = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setSelectedOption(null);
+    setCompleted(false);
+    setUserAnswers([]);
+  };
+
   return (
     <>
       <main>
@@ -55,11 +63,7 @@ const Quiz = () => {
           <FinalView
             score={score}
             questions={questions}
-            setCurrentQuestion={setCurrentQuestion}
-            setScore={setScore}
-            setCompleted={setCompleted}
-            setUserAnswers={setUserAnswers}
-            userAnswers={userAnswers}
+            handleRestart={handleRestart}
           />
         ) : (
           <article className="quiz">
