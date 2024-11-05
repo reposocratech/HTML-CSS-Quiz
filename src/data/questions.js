@@ -87,7 +87,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Crear una sección de navegación' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'El elemento <head> contiene metainformación sobre el documento HTML, como título, enlaces a hojas de estilo, scripts y otros metadatos.',
+    additionalInfo: 'El elemento <head> contiene meta-información sobre el documento HTML, como título, enlaces a hojas de estilo, scripts y otros metadatos.',
   },
   {
     id: 8,
@@ -106,9 +106,9 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     question: '¿Cuál es la diferencia principal entre margin y padding en CSS?',
     options: [
       { id: 1, content: 'No hay diferencia, son sinónimos' },
-      { id: 2, content: 'Margin es espacio fuera del elemento, padding es espacio dentro' },
+      { id: 2, content: 'Margin es el espacio desde el borde del elemento hacia fuera, padding es el espacio desde el borde del elemento hacia dentro' },
       { id: 3, content: 'Margin es para texto, padding es para imágenes' },
-      { id: 4, content: 'Padding es espacio fuera del elemento, margin es espacio dentro' },
+      { id: 4, content: 'Padding es el espacio desde el borde del elemento hacia fuera, margin es el espacio desde el borde del elemento hacia dentro' },
     ],
     correctAnswer: 2,
     additionalInfo: 'Margin crea espacio alrededor del elemento, fuera de sus bordes. Padding crea espacio dentro del elemento, entre sus bordes y su contenido.',
