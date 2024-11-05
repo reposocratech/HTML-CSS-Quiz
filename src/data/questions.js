@@ -161,4 +161,88 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     correctAnswer: 3,
     additionalInfo: 'El atributo viewport en la etiqueta <meta> se usa para controlar cómo se muestra una página en dispositivos móviles, afectando el zoom y el ancho de la página.',
   },
+  {
+    id: 14,
+    question: '¿Para qué se utiliza el elemento <canvas> de HTML?',
+    options: [
+      { id: 1, content: 'Para dibujar gráficos y animaciones mediante scripts' },
+      { id: 2, content: 'Para crear formularios interactivos' },
+      { id: 3, content: 'Para insertar videos en la página web' },
+      { id: 4, content: 'Para definir áreas de navegación' },
+    ],
+    correctAnswer: 1,
+    additionalInfo: 'El elemento <canvas> es un contenedor para gráficos dibujados por medio de JavaScript. Permite crear gráficos, animaciones, juegos y otras composiciones visuales directamente en el navegador.',
+  },
+  {
+    id: 15,
+    question: '¿Cómo funcionan las variables CSS (custom properties) y cuál es su sintaxis?',
+    options: [
+      { id: 1, content: 'Se definen con $variable y se usan con @variable' },
+      { id: 2, content: 'Se definen con @variable y se usan con $variable' },
+      { id: 3, content: 'Se definen con --variable y se usan con var(--variable)' },
+      { id: 4, content: 'Se definen con var(variable) y se usan con --variable' },
+    ],
+    correctAnswer: 3,
+    additionalInfo: 'Las variables CSS, también conocidas como custom properties, se definen usando dos guiones (--) y se acceden usando la función var(). Por ejemplo: --main-color: #06c; color: var(--main-color);',
+  },
+  {
+    id: 16,
+    question: '¿Qué son los selectores de atributo en CSS y cómo se utilizan?',
+    options: [
+      { id: 1, content: 'Seleccionan elementos basados en su posición en el DOM' },
+      { id: 2, content: 'Seleccionan elementos basados en sus clases o IDs' },
+      { id: 3, content: 'Seleccionan elementos basados en sus atributos o valores de atributos' },
+      { id: 4, content: 'Seleccionan elementos basados en sus pseudo-clases' },
+    ],
+    correctAnswer: 3,
+    additionalInfo: 'Los selectores de atributo en CSS permiten seleccionar elementos basados en sus atributos o valores de atributos. Por ejemplo, [type="text"] selecciona todos los elementos con type="text".',
+  },
+  {
+    id: 17,
+    question: '¿Cuál es la diferencia entre visibility: hidden y display: none en CSS?',
+    options: [
+      { id: 1, content: 'No hay diferencia, ambos ocultan el elemento' },
+      { id: 2, content: 'visibility: hidden oculta el elemento pero mantiene su espacio, display: none lo elimina del flujo del documento' },
+      { id: 3, content: 'display: none oculta el elemento pero mantiene su espacio, visibility: hidden lo elimina del flujo del documento' },
+      { id: 4, content: 'visibility: hidden solo funciona en elementos en línea, display: none en elementos de bloque' },
+    ],
+    correctAnswer: 2,
+    additionalInfo: 'visibility: hidden oculta el elemento pero mantiene su espacio en el layout. display: none oculta el elemento y lo elimina completamente del flujo del documento, como si no existiera.',
+  },
+  {
+    id: 18,
+    question: '¿Cómo se utiliza la función calc() en CSS y en qué situaciones es útil?',
+    options: [
+      { id: 1, content: 'Para calcular valores de color en formato RGB' },
+      { id: 2, content: 'Para realizar cálculos matemáticos con diferentes unidades' },
+      { id: 3, content: 'Para calcular la especificidad de los selectores' },
+      { id: 4, content: 'Para calcular el tiempo de las animaciones CSS' },
+    ],
+    correctAnswer: 2,
+    additionalInfo: 'La función calc() permite realizar cálculos matemáticos como parte de un valor CSS. Es útil para combinar unidades diferentes, por ejemplo: width: calc(100% - 80px);',
+  },
+  {
+    id: 19,
+    question: '¿Qué son las media queries en CSS?',
+    options: [
+      { id: 1, content: 'Consultas para obtener información del servidor' },
+      { id: 2, content: 'Reglas CSS que se aplican basadas en características del dispositivo o navegador' },
+      { id: 3, content: 'Métodos para consultar bases de datos desde CSS' },
+      { id: 4, content: 'Funciones para animar elementos en CSS' },
+    ],
+    correctAnswer: 2,
+    additionalInfo: 'Las media queries permiten aplicar estilos CSS basados en características del dispositivo como el ancho de la pantalla. Ejemplo: @media (width <= 600px) { ... }',
+  },
+  {
+    id: 20,
+    question: '¿Para que sirve la función color-mix() en CSS?',
+    options: [
+      { id: 1, content: 'Para combinar colores' },
+      { id: 2, content: 'Para establecer colores de fondo' },
+      { id: 3, content: 'Para establecer colores de texto' },
+      { id: 4, content: 'Para establecer colores de borde' },
+    ],
+    correctAnswer: 1,
+    additionalInfo: 'La función color-mix() permite combinar colores. Por ejemplo: color: color-mix(in srgb, red, blue 20%);',
+  }
 ];
