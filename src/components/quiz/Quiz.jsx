@@ -1,4 +1,5 @@
 import { Answers } from './answers/Answers';
+import { Buttons } from './buttons/Buttons';
 import { Info } from './info/Info';
 
 import './quiz.css';
@@ -26,21 +27,13 @@ export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, 
         />
       )}
 
-      <div className="buttons">
-        {currentQuestion > 0 && (
-          <button onClick={handlePrevious}>Anterior</button>
-        )}
-
-        <button
-          className={`${selectedOption === null ? 'disabled' : ''}`}
-          disabled={selectedOption === null}
-          onClick={handleNext}
-        >
-          {currentQuestion === questions.length - 1
-            ? 'Finalizar'
-            : 'Siguiente'}
-        </button>
-      </div>
+      <Buttons
+        handlePrevious={handlePrevious}
+        handleNext={handleNext}
+        currentQuestion={currentQuestion}
+        selectedOption={selectedOption}
+        questions={questions}
+      />
     </article>
   );
 };
