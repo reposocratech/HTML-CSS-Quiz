@@ -3,6 +3,7 @@ import { questions } from './data/questions';
 import { InfoIcon } from './components/icons/InfoIcon';
 import { Footer } from './components/footer/Footer';
 import { FinalView } from './components/finalView/FinalView';
+import { marked } from 'marked';
 import confetti from 'canvas-confetti';
 
 import './App.css';
@@ -98,8 +99,11 @@ const Quiz = () => {
 
             {selectedOption > 0 && (
               <div className="info">
-                <InfoIcon />
-                <p>{questions[currentQuestion].additionalInfo}</p>
+                <h3>
+                  <InfoIcon />
+                  Información adicional
+                </h3>
+                <p dangerouslySetInnerHTML={{ __html: marked(questions[currentQuestion].additionalInfo) }} />
               </div>
             )}
 

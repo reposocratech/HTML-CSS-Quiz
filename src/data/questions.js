@@ -9,9 +9,13 @@ export const questions = [
       { id: 4, content: 'Establecer la alineación' },
     ],
     correctAnswer: 2,
-    additionalInfo:
-      'Este atributo es importante para mejorar la accesibilidad del contenido.',
-    type: 'text',
+    additionalInfo: `
+El atributo **alt** se usa en las imágenes para proporcionar un **texto alternativo**, mejorando la **accesibilidad** y el **SEO**.
+
+- Mejora la accesibilidad para usuarios con lectores de pantalla.
+- Proporciona contexto cuando la imagen no se puede cargar.
+- Ayuda a los motores de búsqueda a entender el contenido de la imagen.
+    `,
   },
   {
     id: 2,
@@ -23,7 +27,7 @@ export const questions = [
       { id: 4, content: '<src>' },
     ],
     correctAnswer: 1,
-    additionalInfo: 'Esta etiqueta es importante para facilitar la navegación.',
-    type: 'code',
+    additionalInfo:
+      'Para crear un enlace se usa la etiqueta <a> con el atributo href.',
   },
 ];
