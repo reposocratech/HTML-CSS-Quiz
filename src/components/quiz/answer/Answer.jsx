@@ -1,3 +1,5 @@
+import './answer.css';
+
 export const Answer = ({
   option,
   currentQuestion,
