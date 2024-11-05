@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { questions } from './data/questions';
 import { InfoIcon } from './components/icons/InfoIcon';
 import { Footer } from './components/footer/Footer';
+import { FinalView } from './components/finalView/FinalView';
 import confetti from 'canvas-confetti';
 
 import './App.css';
@@ -29,10 +30,10 @@ const Quiz = () => {
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedOption(null);
     } else {
       setCompleted(true);
     }
+    setSelectedOption(null);
   };
 
   const handlePrevious = () => {
@@ -46,15 +47,20 @@ const Quiz = () => {
     <>
       <main>
         {completed ? (
-          <article className="quiz final">
-            <h2>¡Quiz Finalizado!</h2>
-            <p>
-            Puntuación: {score} de {questions.length}
-            </p>
-          </article>
+          <FinalView
+            score={score}
+            questions={questions}
+            setCurrentQuestion={setCurrentQuestion}
+            setScore={setScore}
+            setCompleted={setCompleted}
+            setUserAnswers={setUserAnswers}
+            userAnswers={userAnswers}
+          />
         ) : (
           <article className="quiz">
-            <span className="badge">{currentQuestion + 1} / {questions.length}</span>
+            <span className="badge">
+              {currentQuestion + 1} / {questions.length}
+            </span>
 
             <h2>{questions[currentQuestion].question}</h2>
 
@@ -63,7 +69,7 @@ const Quiz = () => {
                 <label
                   className={`option ${
                     selectedOption !== null &&
-                  option.id === questions[currentQuestion].correctAnswer
+                    option.id === questions[currentQuestion].correctAnswer
                       ? 'correct'
                       : ''
                   }
@@ -108,14 +114,13 @@ const Quiz = () => {
               >
                 {currentQuestion === questions.length - 1
                   ? 'Finalizar'
-                  : 'Siguiente'
-                }
+                  : 'Siguiente'}
               </button>
             </div>
           </article>
         )}
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 };

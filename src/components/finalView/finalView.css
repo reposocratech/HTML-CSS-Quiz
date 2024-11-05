@@ -1,0 +1,31 @@
+@scope (.final-view) {
+  .score {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+
+    .dot {
+      display: grid;
+      place-items: center;
+      width: 1.5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+
+      &.correct {
+        background-color: var(--correct-color);
+      }
+
+      &.incorrect {
+        background-color: var(--incorrect-color);
+      }
+    }
+  }
+}
