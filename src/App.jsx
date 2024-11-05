@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { questions } from './data/questions';
 import { InfoIcon } from './components/icons/InfoIcon';
-import './App.css';
 import { Footer } from './components/footer/Footer';
+import confetti from 'canvas-confetti';
+
+import './App.css';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -11,14 +13,19 @@ const Quiz = () => {
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
 
-  const handleNext = (selectedOption) => {
+  const selectOption = (id) => {
     const correctAnswer = questions[currentQuestion].correctAnswer;
-    const isCorrect = selectedOption === correctAnswer;
+    const isCorrect = id === correctAnswer;
 
     if (isCorrect) {
+      confetti();
       setScore(score + 1);
     }
 
+    setSelectedOption(id);
+  };
+
+  const handleNext = (selectedOption) => {
     const newUserAnswers = [...userAnswers];
     newUserAnswers[currentQuestion] = selectedOption;
     setUserAnswers(newUserAnswers);
@@ -75,7 +82,7 @@ const Quiz = () => {
                     type="radio"
                     name="option"
                     checked={selectedOption === option.id}
-                    onChange={() => setSelectedOption(option.id)}
+                    onChange={() => selectOption(option.id)}
                     disabled={
                       selectedOption !== null && selectedOption !== option.id
                     }
