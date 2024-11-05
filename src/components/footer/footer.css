@@ -13,7 +13,6 @@
 
     a {
       text-decoration: none;
-      color: var(--info-color);
       font-weight: bold;
 
       &:hover {

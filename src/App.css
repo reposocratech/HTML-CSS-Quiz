@@ -4,7 +4,7 @@
   --option-color: #3b3b3b;
   --correct-color: #007500;
   --incorrect-color: #750019;
-  --info-color: #6e52a3;
+  --info-color: #5e458e;
   --text-color: #efeeee;
   color-scheme: light dark;
 }
@@ -21,6 +21,7 @@ body {
   place-items: center;
   min-height: 100dvh;
   color: var(--text-color);
+  background-color: var(--option-color);
 }
 
 main {
@@ -86,6 +87,7 @@ button {
       display: flex;
       align-items: center;
       column-gap: 1rem;
+      font-size: 1.1rem;
 
       &.correct {
         background-color: var(--correct-color);
@@ -117,6 +119,7 @@ button {
     }
 
     p {
+      text-wrap: pretty;
       line-height: 1.5;
       width: 100%;
     }
