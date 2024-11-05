@@ -1,4 +1,4 @@
-import { InfoIcon } from './components/icons/InfoIcon';
+import { InfoIcon } from '../icons/InfoIcon';
 import { marked } from 'marked';
 
 export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, handleNext, handlePrevious}) => {

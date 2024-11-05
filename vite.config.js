@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: 'https://sergio-jr-dev.github.io/HTML-CSS-QUIZ/'
-});
+  base: mode === 'production' ? 'https://sergio-jr-dev.github.io/HTML-CSS-QUIZ/' : '/',
+}));

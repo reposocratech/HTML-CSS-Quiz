@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { questions } from './data/questions';
 import { Footer } from './components/footer/Footer';
 import { FinalView } from './components/finalView/FinalView';
+import { Quiz } from './components/quiz/Quiz';
 import confetti from 'canvas-confetti';
 
 import './App.css';
 
-const Quiz = () => {
+const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
@@ -67,7 +68,6 @@ const Quiz = () => {
         ) : (
           <Quiz
             currentQuestion={currentQuestion}
-            setCurrentQuestion={setCurrentQuestion}
             questions={questions}
             selectOption={selectOption}
             selectedOption={selectedOption}
@@ -80,5 +80,4 @@ const Quiz = () => {
     </>
   );
 };
-
-export default Quiz;
+export default App;
