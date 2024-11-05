@@ -20,7 +20,10 @@ const Quiz = () => {
     const isCorrect = id === correctAnswer;
 
     if (isCorrect) {
-      confetti();
+      confetti({
+        startVelocity: 50,
+        particleCount: 25,
+      });
       setScore((score) => score + 1);
     }
 
