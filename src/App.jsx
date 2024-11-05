@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { questions } from './data/questions';
 import { Footer } from './components/footer/Footer';
 import { FinalView } from './components/finalView/FinalView';
@@ -14,8 +14,12 @@ const App = () => {
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
 
+  const shuffleQuestions = useMemo(() => {
+    return [...questions].sort(() => Math.random() - 0.5);
+  }, []);
+
   const selectOption = (id) => {
-    const { correctAnswer } = questions[currentQuestion];
+    const { correctAnswer } = shuffleQuestions[currentQuestion];
     const isCorrect = id === correctAnswer;
 
     setUserAnswers((prevUserAnswers) => [...prevUserAnswers, id]);
@@ -32,7 +36,7 @@ const App = () => {
   };
 
   const handleNext = () => {
-    currentQuestion < questions.length - 1
+    currentQuestion < shuffleQuestions.length - 1
       ? setCurrentQuestion(currentQuestion + 1)
       : setCompleted(true);
 
@@ -61,14 +65,14 @@ const App = () => {
         {completed ? (
           <FinalView
             score={score}
-            questions={questions}
+            shuffleQuestions={shuffleQuestions}
             userAnswers={userAnswers}
             handleRestart={handleRestart}
           />
         ) : (
           <Quiz
             currentQuestion={currentQuestion}
-            questions={questions}
+            shuffleQuestions={shuffleQuestions}
             selectOption={selectOption}
             selectedOption={selectedOption}
             handleNext={handleNext}
@@ -81,3 +85,4 @@ const App = () => {
   );
 };
 export default App;
+

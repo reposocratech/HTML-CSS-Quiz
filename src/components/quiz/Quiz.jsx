@@ -4,17 +4,17 @@ import { Info } from './info/Info';
 
 import './quiz.css';
 
-export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, handleNext, handlePrevious}) => {
+export const Quiz = ({currentQuestion, shuffleQuestions, selectOption, selectedOption, handleNext, handlePrevious}) => {
   return (
     <article className="quiz">
       <span className="badge">
-        {currentQuestion + 1} / {questions.length}
+        {currentQuestion + 1} / {shuffleQuestions.length}
       </span>
 
-      <h2>{questions[currentQuestion].question}</h2>
+      <h2>{shuffleQuestions[currentQuestion].question}</h2>
 
       <Answers
-        questions={questions}
+        shuffleQuestions={shuffleQuestions}
         currentQuestion={currentQuestion}
         selectOption={selectOption}
         selectedOption={selectedOption}
@@ -23,7 +23,7 @@ export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, 
       {selectedOption > 0 && (
         <Info
           currentQuestion={currentQuestion}
-          questions={questions}
+          shuffleQuestions={shuffleQuestions}
         />
       )}
 
@@ -32,7 +32,7 @@ export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, 
         handleNext={handleNext}
         currentQuestion={currentQuestion}
         selectedOption={selectedOption}
-        questions={questions}
+        shuffleQuestions={shuffleQuestions}
       />
     </article>
   );

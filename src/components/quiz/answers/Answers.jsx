@@ -4,18 +4,18 @@ import './answers.css';
 
 export const Answers = ({
   currentQuestion,
-  questions,
+  shuffleQuestions,
   selectOption,
   selectedOption,
 }) => {
   return (
     <div className="answers">
-      {questions[currentQuestion].options.map((option) => (
+      {shuffleQuestions[currentQuestion].options.map((option) => (
         <Answer
           key={option.id}
           option={option}
           currentQuestion={currentQuestion}
-          questions={questions}
+          shuffleQuestions={shuffleQuestions}
           selectOption={selectOption}
           selectedOption={selectedOption}
         />

@@ -3,16 +3,16 @@ import './answer.css';
 export const Answer = ({
   option,
   currentQuestion,
-  questions,
+  shuffleQuestions,
   selectOption,
   selectedOption,
 }) => {
   const correctAnswer =
     selectedOption !== null &&
-    option.id === questions[currentQuestion].correctAnswer;
+    option.id === shuffleQuestions[currentQuestion].correctAnswer;
   const incorrectAnswer =
     selectedOption === option.id &&
-    option.id !== questions[currentQuestion].correctAnswer;
+    option.id !== shuffleQuestions[currentQuestion].correctAnswer;
 
   return (
     <label

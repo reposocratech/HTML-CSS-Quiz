@@ -1,6 +1,6 @@
 import './buttons.css';
 
-export const Buttons = ({currentQuestion, questions, selectedOption, handleNext, handlePrevious}) => {
+export const Buttons = ({currentQuestion, shuffleQuestions, selectedOption, handleNext, handlePrevious}) => {
   return (
     <div className="buttons">
       {currentQuestion > 0 && (
@@ -12,7 +12,7 @@ export const Buttons = ({currentQuestion, questions, selectedOption, handleNext,
         disabled={selectedOption === null}
         onClick={handleNext}
       >
-        {currentQuestion === questions.length - 1
+        {currentQuestion === shuffleQuestions.length - 1
           ? 'Finalizar'
           : 'Siguiente'}
       </button>
