@@ -1,0 +1,22 @@
+@scope (.info) {
+  :scope {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    background-color: var(--info-color);
+    padding: 1rem;
+    border-radius: 16px;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+
+    p {
+      text-wrap: pretty;
+      line-height: 1.5;
+      width: 100%;
+    }
+  }
+}

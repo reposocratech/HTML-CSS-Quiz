@@ -1,6 +1,5 @@
 import { Answers } from './answers/Answers';
-import { InfoIcon } from '../icons/InfoIcon';
-import { marked } from 'marked';
+import { Info } from './info/Info';
 
 import './quiz.css';
 
@@ -21,13 +20,10 @@ export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, 
       />
 
       {selectedOption > 0 && (
-        <div className="info">
-          <h3>
-            <InfoIcon />
-                  Información adicional
-          </h3>
-          <p dangerouslySetInnerHTML={{ __html: marked(questions[currentQuestion].additionalInfo) }} />
-        </div>
+        <Info
+          currentQuestion={currentQuestion}
+          questions={questions}
+        />
       )}
 
       <div className="buttons">
