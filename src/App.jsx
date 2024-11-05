@@ -15,6 +15,9 @@ const Quiz = () => {
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
 
+  console.log(score);
+
+
   const selectOption = (id) => {
     const { correctAnswer } = questions[currentQuestion];
     const isCorrect = id === correctAnswer;
@@ -63,6 +66,7 @@ const Quiz = () => {
           <FinalView
             score={score}
             questions={questions}
+            userAnswers={userAnswers}
             handleRestart={handleRestart}
           />
         ) : (

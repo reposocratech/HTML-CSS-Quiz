@@ -1,5 +1,5 @@
 import './finalView.css';
-export const FinalView = ({ score, questions, handleRestart }) => {
+export const FinalView = ({ score, questions, userAnswers, handleRestart }) => {
   const percentage = (score / questions.length) * 100;
   const message =
     percentage >= 80
@@ -23,7 +23,7 @@ export const FinalView = ({ score, questions, handleRestart }) => {
         {questions.map(({ id, correctAnswer }, i) => (
           <span
             key={id}
-            className={`dot ${correctAnswer === i + 1 ? 'correct' : 'incorrect'}`}
+            className={`dot ${correctAnswer === userAnswers[i] ? 'correct' : 'incorrect'}`}
           >
             {id}
           </span>
