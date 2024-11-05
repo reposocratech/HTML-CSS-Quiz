@@ -33,7 +33,7 @@ main {
 h1 {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, calc(2rem + 1.333vw), 3rem);
   text-shadow: 2px 2px 3px var(--info-color);
 }
 
@@ -65,6 +65,7 @@ button {
   flex-direction: column;
   row-gap: 1rem;
   position: relative;
+  width: min(670px, 100%);
 
   .badge {
     position: absolute;
