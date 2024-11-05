@@ -21,7 +21,7 @@ body {
   justify-items: center;
   min-height: 100dvh;
   color: var(--text-color);
-  background-color: var(--option-color);
+  background-color: color-mix(in srgb, var(--option-color), black 25%);
 }
 
 main {

@@ -1,3 +1,4 @@
+import { Answers } from './answers/Answers';
 import { InfoIcon } from '../icons/InfoIcon';
 import { marked } from 'marked';
 
@@ -12,36 +13,12 @@ export const Quiz = ({currentQuestion, questions, selectOption, selectedOption, 
 
       <h2>{questions[currentQuestion].question}</h2>
 
-      <div className="options">
-        {questions[currentQuestion].options.map((option) => (
-          <label
-            className={`option ${
-              selectedOption !== null &&
-                    option.id === questions[currentQuestion].correctAnswer
-                ? 'correct'
-                : ''
-            }
-                ${
-          selectedOption === option.id &&
-                  option.id !== questions[currentQuestion].correctAnswer
-            ? 'incorrect'
-            : ''
-          }`}
-            key={option.id}
-          >
-            <input
-              type="radio"
-              name="option"
-              checked={selectedOption === option.id}
-              onChange={() => selectOption(option.id)}
-              disabled={
-                selectedOption !== null && selectedOption !== option.id
-              }
-            />
-            {option.content}
-          </label>
-        ))}
-      </div>
+      <Answers
+        questions={questions}
+        currentQuestion={currentQuestion}
+        selectOption={selectOption}
+        selectedOption={selectedOption}
+      />
 
       {selectedOption > 0 && (
         <div className="info">
