@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { questions } from './data/questions';
-import { InfoIcon } from './components/icons/InfoIcon';
 import { Footer } from './components/footer/Footer';
 import { FinalView } from './components/finalView/FinalView';
-import { marked } from 'marked';
 import confetti from 'canvas-confetti';
 
 import './App.css';
@@ -67,70 +65,15 @@ const Quiz = () => {
             handleRestart={handleRestart}
           />
         ) : (
-          <article className="quiz">
-            <span className="badge">
-              {currentQuestion + 1} / {questions.length}
-            </span>
-
-            <h2>{questions[currentQuestion].question}</h2>
-
-            <div className="options">
-              {questions[currentQuestion].options.map((option) => (
-                <label
-                  className={`option ${
-                    selectedOption !== null &&
-                    option.id === questions[currentQuestion].correctAnswer
-                      ? 'correct'
-                      : ''
-                  }
-                ${
-                selectedOption === option.id &&
-                  option.id !== questions[currentQuestion].correctAnswer
-                  ? 'incorrect'
-                  : ''
-                }`}
-                  key={option.id}
-                >
-                  <input
-                    type="radio"
-                    name="option"
-                    checked={selectedOption === option.id}
-                    onChange={() => selectOption(option.id)}
-                    disabled={
-                      selectedOption !== null && selectedOption !== option.id
-                    }
-                  />
-                  {option.content}
-                </label>
-              ))}
-            </div>
-
-            {selectedOption > 0 && (
-              <div className="info">
-                <h3>
-                  <InfoIcon />
-                  Información adicional
-                </h3>
-                <p dangerouslySetInnerHTML={{ __html: marked(questions[currentQuestion].additionalInfo) }} />
-              </div>
-            )}
-
-            <div className="buttons">
-              {currentQuestion > 0 && (
-                <button onClick={handlePrevious}>Anterior</button>
-              )}
-
-              <button
-                className={`${selectedOption === null ? 'disabled' : ''}`}
-                disabled={selectedOption === null}
-                onClick={handleNext}
-              >
-                {currentQuestion === questions.length - 1
-                  ? 'Finalizar'
-                  : 'Siguiente'}
-              </button>
-            </div>
-          </article>
+          <Quiz
+            currentQuestion={currentQuestion}
+            setCurrentQuestion={setCurrentQuestion}
+            questions={questions}
+            selectOption={selectOption}
+            selectedOption={selectedOption}
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
+          />
         )}
       </main>
       <Footer />
