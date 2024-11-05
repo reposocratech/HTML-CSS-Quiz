@@ -46,6 +46,7 @@ const Quiz = () => {
   return (
     <>
       <main>
+        <h1>HTML & CSS QUIZ</h1>
         {completed ? (
           <FinalView
             score={score}
