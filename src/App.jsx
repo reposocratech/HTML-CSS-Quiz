@@ -22,12 +22,11 @@ const Quiz = () => {
       setScore((score) => score + 1);
     }
 
+    setUserAnswers((userAnswers) => [...userAnswers, id]);
     setSelectedOption(id);
   };
 
-  const handleNext = (selectedOption) => {
-    setUserAnswers((userAnswers) => [...userAnswers, selectedOption]);
-
+  const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
@@ -105,7 +104,7 @@ const Quiz = () => {
               <button
                 className={`${selectedOption === null ? 'disabled' : ''}`}
                 disabled={selectedOption === null}
-                onClick={() => handleNext(selectedOption)}
+                onClick={handleNext}
               >
                 {currentQuestion === questions.length - 1
                   ? 'Finalizar'
