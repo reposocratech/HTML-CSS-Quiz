@@ -268,5 +268,17 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 4,
     additionalInfo: 'En CSS la opacidad de un elemento se modifica con la propiedad `opacity` con un valor entre 0 y 1 o 0% y 100%. Por ejemplo `opacity: 0.5;` es equivalente a `opacity: 50%;`',
+  },
+  {
+    id: 23,
+    question: '¿Cual es la forma correcta de agrupar selectores en CSS?',
+    options: [
+      { id: 1, content: 'selector1, selector2, selector3' },
+      { id: 2, content: ':is(selector1, selector2, selector3)' },
+      { id: 3, content: ':where(selector1, selector2, selector3)' },
+      { id: 4, content: 'Todas son correctas' },
+    ],
+    correctAnswer: 4,
+    additionalInfo: 'En CSS se pueden agrupar selectores de varias formas. Se pueden separar con una `,` o con selectores más modernos como `:is()` o `:where()`.',
   }
 ];
