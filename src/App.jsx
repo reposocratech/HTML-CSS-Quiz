@@ -61,7 +61,12 @@ const App = () => {
   return (
     <>
       <main>
-        <h1>HTML & CSS QUIZ</h1>
+        <h1>
+          <div className="img">
+            <img src="./images/favicon.png" alt="Logo de HTML-CSS-QUIZ" />
+          </div>
+          HTML & CSS QUIZ
+        </h1>
         {completed ? (
           <FinalView
             score={score}
