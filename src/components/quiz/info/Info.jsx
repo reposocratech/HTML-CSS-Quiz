@@ -10,7 +10,7 @@ export const Info = ({ shuffleQuestions, currentQuestion }) => {
         <InfoIcon />
                   Información adicional
       </h3>
-      <p dangerouslySetInnerHTML={{ __html: marked(shuffleQuestions[currentQuestion].additionalInfo) }} />
+      <div dangerouslySetInnerHTML={{ __html: marked(shuffleQuestions[currentQuestion].additionalInfo) }} />
     </div>
   );
 };

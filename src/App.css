@@ -54,6 +54,7 @@ button {
   font: inherit;
   padding: 1rem 2rem;
   color: var(--text-color);
+  cursor: pointer;
 
   &.disabled {
     opacity: 0.5;
