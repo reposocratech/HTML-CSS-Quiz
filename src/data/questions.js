@@ -51,7 +51,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Home Tool Markup Language' },
     ],
     correctAnswer: 1,
-    additionalInfo: 'HTML significa Hyper Text Markup Language. Es el lenguaje estándar para crear páginas web.',
+    additionalInfo: '**HTML** significa **Hyper Text Markup Language**. Es el lenguaje estándar para crear páginas web.',
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: '# Este es un comentario' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'En CSS, los comentarios se escriben entre /* y */. Esto permite escribir notas o desactivar temporalmente ciertas reglas de estilo.',
+    additionalInfo: 'En CSS, los comentarios se escriben entre `/*` y `*/`. Esto permite escribir notas o desactivar temporalmente ciertas reglas de estilo.',
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Crear una sección de navegación' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'El elemento <head> contiene meta-información sobre el documento HTML, como título, enlaces a hojas de estilo, scripts y otros metadatos.',
+    additionalInfo: 'El elemento `<head>` contiene **meta-información** sobre el documento HTML, como título, enlaces a hojas de estilo, scripts y otros metadatos.',
   },
   {
     id: 8,
@@ -123,7 +123,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: '<unordered>' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'La etiqueta <ul> (unordered list) se usa para crear listas no ordenadas en HTML. Los elementos de la lista se definen con <li>.',
+    additionalInfo: 'La etiqueta `<ul>` (**unordered list**) se usa para crear listas no ordenadas en HTML. Los elementos de la lista se definen con `<li>`.',
   },
   {
     id: 11,
