@@ -135,7 +135,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: '<script type="text/css" src="styles.css">' },
     ],
     correctAnswer: 2,
-    additionalInfo: 'Se usa la etiqueta <link> con los atributos rel="stylesheet" y href apuntando al archivo CSS para vincular hojas de estilo externas.',
+    additionalInfo: 'Se usa la etiqueta `<link>` con los atributos **rel="stylesheet"** y **href** apuntando al archivo CSS para vincular hojas de estilo externas.',
   },
   {
     id: 12,
@@ -159,7 +159,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Especificar la codificación de caracteres' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'El atributo viewport en la etiqueta <meta> se usa para controlar cómo se muestra una página en dispositivos móviles, afectando el zoom y el ancho de la página.',
+    additionalInfo: 'El atributo **viewport** en la etiqueta `<meta>` se usa para controlar cómo se muestra una página en dispositivos móviles, afectando el zoom y el ancho de la página.',
   },
   {
     id: 14,
@@ -171,7 +171,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Para definir áreas de navegación' },
     ],
     correctAnswer: 1,
-    additionalInfo: 'El elemento <canvas> es un contenedor para gráficos dibujados por medio de JavaScript. Permite crear gráficos, animaciones, juegos y otras composiciones visuales directamente en el navegador.',
+    additionalInfo: 'El elemento `<canvas>` es un contenedor para **gráficos dibujados por medio de JavaScript**. Permite crear gráficos, animaciones, juegos y otras composiciones visuales directamente en el navegador.',
   },
   {
     id: 15,
@@ -183,7 +183,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Se definen con var(variable) y se usan con --variable' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'Las variables CSS, también conocidas como custom properties, se definen usando dos guiones (--) y se acceden usando la función var(). Por ejemplo: --main-color: #06c; color: var(--main-color);',
+    additionalInfo: 'Las variables CSS, también conocidas como custom properties, se definen usando dos guiones (--) y se acceden usando la función var(). Por ejemplo: `--main-color: #06c;` `color: var(--main-color);',
   },
   {
     id: 16,
@@ -195,7 +195,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Seleccionan elementos basados en sus pseudo-clases' },
     ],
     correctAnswer: 3,
-    additionalInfo: 'Los selectores de atributo en CSS permiten seleccionar elementos basados en sus atributos o valores de atributos. Por ejemplo, [type="text"] selecciona todos los elementos con type="text".',
+    additionalInfo: 'Los selectores de atributo en CSS **permiten seleccionar elementos basados en sus atributos o valores de atributos**. Por ejemplo, `[type="text"]` selecciona todos los elementos con `type="text"`.',
   },
   {
     id: 17,
@@ -207,7 +207,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'visibility: hidden solo funciona en elementos en línea, display: none en elementos de bloque' },
     ],
     correctAnswer: 2,
-    additionalInfo: 'visibility: hidden oculta el elemento pero mantiene su espacio en el layout. display: none oculta el elemento y lo elimina completamente del flujo del documento, como si no existiera.',
+    additionalInfo: '`visibility: hidden` oculta el elemento pero mantiene su espacio en el layout. `display: none` oculta el elemento y lo elimina completamente del flujo del documento, como si no existiera.',
   },
   {
     id: 18,
@@ -219,7 +219,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Para calcular el tiempo de las animaciones CSS' },
     ],
     correctAnswer: 2,
-    additionalInfo: 'La función calc() permite realizar cálculos matemáticos como parte de un valor CSS. Es útil para combinar unidades diferentes, por ejemplo: width: calc(100% - 80px);',
+    additionalInfo: 'La función `calc()` permite realizar **cálculos matemáticos** como parte de un valor CSS. Es útil para combinar unidades diferentes, por ejemplo: `width: calc(100% - 80px);`',
   },
   {
     id: 19,
@@ -231,7 +231,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Funciones para animar elementos en CSS' },
     ],
     correctAnswer: 2,
-    additionalInfo: 'Las media queries permiten aplicar estilos CSS basados en características del dispositivo como el ancho de la pantalla. Ejemplo: @media (width <= 600px) { ... }',
+    additionalInfo: 'Las media queries permiten aplicar estilos CSS basados en características del dispositivo como el ancho de la pantalla. Ejemplo: `@media (width <= 600px) { ... }`',
   },
   {
     id: 20,
@@ -243,6 +243,30 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
       { id: 4, content: 'Para establecer colores de borde' },
     ],
     correctAnswer: 1,
-    additionalInfo: 'La función color-mix() permite combinar colores. Por ejemplo: color: color-mix(in srgb, red, blue 20%);',
+    additionalInfo: 'La función `color-mix()` permite combinar colores. Por ejemplo: `color: color-mix(in srgb, red, blue 20%);`, obteniendo como resultado un nuevo color.',
+  },
+  {
+    id: 21,
+    question: '¿Cuál es la forma correcta de representar decimales en CSS?',
+    options: [
+      { id: 1, content: '0,5' },
+      { id: 2, content: '0.5' },
+      { id: 3, content: '.5' },
+      { id: 4, content: 'La 2 y la 3 son correctas' },
+    ],
+    correctAnswer: 4,
+    additionalInfo: 'En CSS los números decimales se representan con un punto. Cuando se trata de valores decimales entre 0 y 1, es técnicamente correcto usar ambas formas: 0.5 o .5.',
+  },
+  {
+    id: 22,
+    question: '¿Cuál es la forma correcta de cambiar la opacidad de un elemento?',
+    options: [
+      { id: 1, content: 'opacity: 0.5' },
+      { id: 2, content: 'opacity: 50%' },
+      { id: 3, content: 'opacity: 50' },
+      { id: 4, content: 'La 1 y la 2 son correctas' },
+    ],
+    correctAnswer: 4,
+    additionalInfo: 'En CSS la opacidad de un elemento se modifica con la propiedad `opacity` con un valor entre 0 y 1 o 0% y 100%. Por ejemplo `opacity: 0.5;` es equivalente a `opacity: 50%;`',
   }
 ];
