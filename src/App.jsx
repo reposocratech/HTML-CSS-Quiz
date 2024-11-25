@@ -1,3 +1,4 @@
+import { QuizContextProvider } from './context/QuizContextProvider.jsx';
 import { Header } from './components/header/Header';
 import { Game } from './components/quiz/game/Game';
 import { Footer } from './components/footer/Footer';
@@ -8,7 +9,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <Game />
+      <QuizContextProvider>
+        <Game />
+      </QuizContextProvider>
       <Footer />
     </>
   );
