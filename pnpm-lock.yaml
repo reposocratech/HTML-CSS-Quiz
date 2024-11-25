@@ -36,6 +36,9 @@ importers:
       eslint:
         specifier: ^9.13.0
         version: 9.14.0
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.14.0)
       eslint-config-socratech:
         specifier: ^0.0.2
         version: 0.0.2
@@ -599,6 +602,12 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  eslint-config-prettier@9.1.0:
+    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
 
   eslint-config-socratech@0.0.2:
     resolution: {integrity: sha512-Bs7tTI+uTl1mqCMVRjt6elURlg9mb45FnT3WOMenloVpGRUCUqXYLIAepuXnyHpuHvNPLTK5LBf25PJmlkr/9g==}
@@ -1729,6 +1738,10 @@ snapshots:
       '@esbuild/win32-x64': 0.21.5
 
   escape-string-regexp@4.0.0: {}
+
+  eslint-config-prettier@9.1.0(eslint@9.14.0):
+    dependencies:
+      eslint: 9.14.0
 
   eslint-config-socratech@0.0.2: {}
 

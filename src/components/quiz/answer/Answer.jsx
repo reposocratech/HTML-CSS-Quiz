@@ -1,12 +1,12 @@
+import { useContext } from 'react';
+import { QuizContext } from '../../../context/QuizContext';
+
 import './answer.css';
 
-export const Answer = ({
-  option,
-  currentQuestion,
-  shuffleQuestions,
-  selectOption,
-  selectedOption,
-}) => {
+export const Answer = ({ option }) => {
+  const { selectedOption, shuffleQuestions, currentQuestion, selectOption } =
+    useContext(QuizContext);
+
   const correctAnswer =
     selectedOption !== null &&
     option.id === shuffleQuestions[currentQuestion].correctAnswer;
@@ -19,8 +19,7 @@ export const Answer = ({
       className={`
         answer 
         ${correctAnswer ? 'correct' : ''}
-        ${incorrectAnswer ? 'incorrect' : ''}`
-      }
+        ${incorrectAnswer ? 'incorrect' : ''}`}
     >
       <input
         type="radio"

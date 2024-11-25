@@ -1,10 +1,15 @@
+import { useContext } from 'react';
+import { QuizContext } from '../../context/QuizContext';
 import { Answers } from './answers/Answers';
 import { Buttons } from './buttons/Buttons';
 import { Info } from './info/Info';
 
 import './quiz.css';
 
-export const Quiz = ({currentQuestion, shuffleQuestions, selectOption, selectedOption, handleNext, handlePrevious}) => {
+export const Quiz = () => {
+  const { currentQuestion, shuffleQuestions, selectedOption } =
+    useContext(QuizContext);
+
   return (
     <article className="quiz">
       <span className="badge">
@@ -13,27 +18,11 @@ export const Quiz = ({currentQuestion, shuffleQuestions, selectOption, selectedO
 
       <h2>{shuffleQuestions[currentQuestion].question}</h2>
 
-      <Answers
-        shuffleQuestions={shuffleQuestions}
-        currentQuestion={currentQuestion}
-        selectOption={selectOption}
-        selectedOption={selectedOption}
-      />
+      <Answers />
 
-      {selectedOption > 0 && (
-        <Info
-          currentQuestion={currentQuestion}
-          shuffleQuestions={shuffleQuestions}
-        />
-      )}
+      {selectedOption > 0 && <Info />}
 
-      <Buttons
-        handlePrevious={handlePrevious}
-        handleNext={handleNext}
-        currentQuestion={currentQuestion}
-        selectedOption={selectedOption}
-        shuffleQuestions={shuffleQuestions}
-      />
+      <Buttons />
     </article>
   );
 };
