@@ -1,13 +1,3 @@
-@scope (.final-view) {
-  :scope {
-    margin-block-end: 1rem;
-  }
-
-  .score {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1rem;
-  }
+.final-view {
+  margin-block-end: 1rem;
 }
