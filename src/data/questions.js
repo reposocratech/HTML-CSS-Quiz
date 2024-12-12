@@ -221,7 +221,7 @@ El atributo **alt** de HTML se usa en las imágenes para proporcionar un **texto
     ],
     correctAnswer: 3,
     additionalInfo:
-      'Las variables CSS, también conocidas como custom properties, se definen usando dos guiones (--) y se acceden usando la función var(). Por ejemplo: `--main-color: #06c;` `color: var(--main-color);',
+      'Las variables CSS, también conocidas como custom properties, se definen usando dos guiones (--) y se acceden usando la función var(). Por ejemplo: `--main-color: #06c;` `color: var(--main-color);`',
   },
   {
     id: 16,
@@ -252,12 +252,12 @@ El atributo **alt** de HTML se usa en las imágenes para proporcionar un **texto
       {
         id: 2,
         content:
-          'visibility: hidden oculta el elemento pero mantiene su espacio, display: none lo elimina del flujo del documento',
+          '"visibility: hidden" oculta el elemento pero mantiene su espacio, "display: none" lo elimina del flujo del documento',
       },
       {
         id: 3,
         content:
-          'display: none oculta el elemento pero mantiene su espacio, visibility: hidden lo elimina del flujo del documento',
+          '"display: none" oculta el elemento pero mantiene su espacio, "visibility: hidden" lo elimina del flujo del documento',
       },
       {
         id: 4,

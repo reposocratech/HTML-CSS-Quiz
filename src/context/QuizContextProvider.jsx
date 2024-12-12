@@ -9,6 +9,7 @@ export const QuizContextProvider = ({ children }) => {
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
+  console.log(userAnswers);
 
   const shuffleQuestions = useMemo(() => {
     return [...questions].sort(() => Math.random() - 0.5);
@@ -23,7 +24,8 @@ export const QuizContextProvider = ({ children }) => {
     if (isCorrect) {
       confetti({
         startVelocity: 50,
-        particleCount: 25,
+        particleCount: 10,
+        gravity: 10,
       });
       setScore((score) => score + 1);
     }

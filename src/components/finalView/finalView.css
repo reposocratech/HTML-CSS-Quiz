@@ -1,4 +1,8 @@
 @scope (.final-view) {
+  :scope {
+    margin-block-end: 1rem;
+  }
+
   .score {
     text-align: center;
     display: flex;
