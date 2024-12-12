@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { QuizContext } from '../../../context/QuizContext';
 
 import './results.css';
+import { marked } from 'marked';
 
 export const Results = () => {
   const { shuffleQuestions, userAnswers } = useContext(QuizContext);
@@ -25,11 +26,16 @@ export const Results = () => {
                 }
               `}
               >
-                {option.id}: {option.content}
+                {option.content}
               </p>
             ))}
           </div>
-          <p>{question.additionalInfo}</p>
+          <p
+            className="info"
+            dangerouslySetInnerHTML={{
+              __html: marked(question.additionalInfo),
+            }}
+          ></p>
         </article>
       ))}
     </article>
