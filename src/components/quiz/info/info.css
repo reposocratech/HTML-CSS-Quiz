@@ -6,6 +6,16 @@
     background-color: var(--info-color);
     padding: 1rem;
     border-radius: 16px;
+    opacity: 1;
+    interpolate-size: allow-keywords;
+    height: max-content;
+    overflow: clip;
+    transition: opacity 0.3s, height 0.3s;
+
+    @starting-style {
+      opacity: 0;
+      height: 0;
+    }
 
     h3 {
       display: flex;
