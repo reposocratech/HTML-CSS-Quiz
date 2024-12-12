@@ -41,13 +41,6 @@ export const QuizContextProvider = ({ children }) => {
     setSelectedOption(null);
   };
 
-  const handlePrevious = () => {
-    if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
-      setSelectedOption(userAnswers[currentQuestion - 1] || null);
-    }
-  };
-
   const handleRestart = () => {
     setScore(0);
     setCurrentQuestion(0);
@@ -72,7 +65,6 @@ export const QuizContextProvider = ({ children }) => {
         shuffleQuestions,
         selectOption,
         handleNext,
-        handlePrevious,
         handleRestart,
       }}
     >
