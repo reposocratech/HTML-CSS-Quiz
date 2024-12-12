@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { QuizContext } from '../../../context/QuizContext';
 
+import './dots.css';
+
 export const Dots = () => {
   const { shuffleQuestions, userAnswers } = useContext(QuizContext);
 
