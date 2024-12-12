@@ -4,13 +4,13 @@ export const questions = [
     question: '¿Cuál es el propósito del atributo alt en una etiqueta img?',
     options: [
       { id: 1, content: 'Establecer el tamaño' },
-      { id: 2, content: 'Definir texto alternativo' },
+      { id: 2, content: 'Definir el texto alternativo' },
       { id: 3, content: 'Cambiar el formato' },
       { id: 4, content: 'Establecer la alineación' },
     ],
     correctAnswer: 2,
     additionalInfo: `
-El atributo **alt** se usa en las imágenes para proporcionar un **texto alternativo**, mejorando la **accesibilidad** y el **SEO**.
+El atributo **alt** de HTML se usa en las imágenes para proporcionar un **texto alternativo**, mejorando la **accesibilidad** y el **SEO**.
 
 - Mejora la accesibilidad para usuarios con lectores de pantalla.
 - Proporciona contexto cuando la imagen no se puede cargar.
@@ -79,7 +79,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 3,
     additionalInfo:
-      'La propiedad `color` en CSS se utiliza para especificar el color del texto dentro de un elemento.',
+      'En CSS se usa la propiedad `color` para especificar el color del texto. Por ejemplo: `color: red;` cambia el color del texto a rojo.',
   },
   {
     id: 7,
@@ -154,7 +154,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 2,
     additionalInfo:
-      'Se usa la etiqueta `<link>` con los atributos **rel="stylesheet"** y **href** apuntando al archivo CSS para vincular hojas de estilo externas.',
+      'En HTML se usa la etiqueta `<link>` con los atributos **rel="stylesheet"** y **href** apuntando al archivo CSS para vincular hojas de estilo externas.',
   },
   {
     id: 12,
@@ -168,7 +168,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 2,
     additionalInfo:
-      'La propiedad `display: flex` se usa para crear un contenedor flexible, permitiendo un diseño más fácil y responsive de los elementos hijos.',
+      'En CSS, la propiedad `display: flex` se usa para crear un contenedor flexible, permitiendo un diseño más fácil y responsive de los elementos hijos.',
   },
   {
     id: 13,
@@ -185,7 +185,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 3,
     additionalInfo:
-      'El atributo **viewport** en la etiqueta `<meta>` se usa para controlar cómo se muestra una página en dispositivos móviles, afectando el zoom y el ancho de la página.',
+      'El atributo **viewport** en la etiqueta `<meta>` de HTML se usa para controlar cómo se muestra una página en dispositivos móviles, afectando el zoom y el ancho de la página.',
   },
   {
     id: 14,
@@ -201,7 +201,7 @@ El atributo **alt** se usa en las imágenes para proporcionar un **texto alterna
     ],
     correctAnswer: 1,
     additionalInfo:
-      'El elemento `<canvas>` es un contenedor para **gráficos dibujados por medio de JavaScript**. Permite crear gráficos, animaciones, juegos y otras composiciones visuales directamente en el navegador.',
+      'En HTML, el elemento `<canvas>` es un contenedor para **gráficos dibujados por medio de JavaScript**. Permite crear gráficos, animaciones, juegos y otras composiciones visuales directamente en el navegador.',
   },
   {
     id: 15,
