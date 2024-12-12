@@ -21,7 +21,11 @@ body {
   justify-items: center;
   min-height: 100dvh;
   color: var(--text-color);
-  background-color: color-mix(in srgb, var(--option-color), black 25%);
+  background: radial-gradient(
+    125% 125% at 50% 10%,
+    #121212 40%,
+    var(--secondary-color) 100%
+  );
 }
 
 main {
