@@ -9,7 +9,7 @@ export const QuizContextProvider = ({ children }) => {
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [userAnswers, setUserAnswers] = useState([]);
-  console.log(userAnswers);
+  const [showResults, setShowResults] = useState(false);
 
   const shuffleQuestions = useMemo(() => {
     return [...questions].sort(() => Math.random() - 0.5);
@@ -66,6 +66,8 @@ export const QuizContextProvider = ({ children }) => {
         selectOption,
         handleNext,
         handleRestart,
+        setShowResults,
+        showResults,
       }}
     >
       {children}
