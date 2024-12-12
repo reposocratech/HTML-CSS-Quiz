@@ -3,10 +3,10 @@ import { QuizContext } from '../../context/QuizContext';
 import { Results } from './results/Results';
 
 import './finalView.css';
+import { Dots } from './dots/Dots';
 
 export const FinalView = () => {
-  const { score, shuffleQuestions, userAnswers, handleRestart } =
-    useContext(QuizContext);
+  const { score, shuffleQuestions, handleRestart } = useContext(QuizContext);
 
   const percentage = (score / shuffleQuestions.length) * 100;
   const message =
@@ -29,18 +29,7 @@ export const FinalView = () => {
           <button onClick={handleRestart}>Jugar de nuevo</button>
         </div>
 
-        <div className="dots">
-          {shuffleQuestions.map(({ id, correctAnswer }, i) => (
-            <span
-              key={id}
-              className={`dot ${
-                correctAnswer === userAnswers[i] ? 'correct' : 'incorrect'
-              }`}
-            >
-              {i + 1}
-            </span>
-          ))}
-        </div>
+        <Dots />
       </article>
       <Results />
     </>
