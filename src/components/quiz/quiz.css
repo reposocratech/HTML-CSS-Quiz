@@ -16,4 +16,8 @@
     padding: 0.3rem 0.6rem;
     border-radius: 16px;
   }
+
+  .question-title {
+    padding-inline-end: 70px;
+  }
 }

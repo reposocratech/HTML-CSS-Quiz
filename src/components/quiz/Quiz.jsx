@@ -16,7 +16,9 @@ export const Quiz = () => {
         {currentQuestion + 1} / {shuffleQuestions.length}
       </span>
 
-      <h2>{shuffleQuestions[currentQuestion].question}</h2>
+      <h2 className="question-title">
+        {shuffleQuestions[currentQuestion].question}
+      </h2>
 
       <Answers />
 

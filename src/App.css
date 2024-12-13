@@ -84,9 +84,18 @@ button {
   padding: 1rem 2rem;
   color: var(--text-color);
   cursor: pointer;
+  transition: filter 0.3s, scale 0.3s;
 
   &.disabled {
     opacity: 0.5;
     filter: grayscale(0.8);
+  }
+
+  &:hover {
+    filter: brightness(1.15);
+  }
+
+  &:active {
+    scale: 0.9;
   }
 }

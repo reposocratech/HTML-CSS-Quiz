@@ -11,9 +11,9 @@ export const FinalView = () => {
 
   return (
     <>
-      <article className="quiz final-view">
+      <section className="quiz final-view">
         <Score />
-      </article>
+      </section>
       {showResults && (
         <>
           <Results />

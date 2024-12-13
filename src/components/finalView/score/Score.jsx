@@ -20,20 +20,33 @@ export const Score = () => {
       ? '¡Buen intento!'
       : '¡Sigue practicando!';
   return (
-    <section className="score">
+    <article className="score">
       <h2 className="message">{message}</h2>
+      <div className="score-circles">
+        <div>
+          <span>
+            {score} / {shuffleQuestions.length}
+          </span>
+        </div>
+        <div>
+          <span>{percentage.toFixed()}%</span>
+        </div>
+      </div>
       <p>
-        Has contestado {score} preguntas correctamente de un total de{' '}
+        Has contestado correctamente {score} preguntas de un total de{' '}
         {shuffleQuestions.length}, consiguiendo un porcentaje de acierto de (
         {percentage.toFixed()}%).
       </p>
-      <button
-        onClick={() => setShowResults(true)}
-        hidden={showResults === true}
-      >
-        Ver resultados
-      </button>
-      <button onClick={handleRestart}>Jugar de nuevo</button>
-    </section>
+
+      <div className="buttons">
+        <button
+          onClick={() => setShowResults(true)}
+          hidden={showResults === true}
+        >
+          Ver resultados
+        </button>
+        <button onClick={handleRestart}>Jugar de nuevo</button>
+      </div>
+    </article>
   );
 };
