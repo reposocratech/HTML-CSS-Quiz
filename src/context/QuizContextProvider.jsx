@@ -36,7 +36,12 @@ export const QuizContextProvider = ({ children }) => {
   const handleNext = () => {
     currentQuestion < shuffleQuestions.length - 1
       ? setCurrentQuestion(currentQuestion + 1)
-      : setCompleted(true);
+      : setCompleted(true),
+      confetti({
+        particleCount: 150,
+        spread: 360,
+        origin: { y: 0.3, x: 0.5 },
+      });
 
     setSelectedOption(null);
   };
