@@ -68,6 +68,11 @@ h2 {
   text-wrap: balance;
 }
 
+p {
+  text-wrap: pretty;
+  line-height: 1.5;
+}
+
 button {
   border-radius: 16px;
   border: none;

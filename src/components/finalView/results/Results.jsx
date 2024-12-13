@@ -1,13 +1,13 @@
 import { useContext } from 'react';
+import { marked } from 'marked';
 import { QuizContext } from '../../../context/QuizContext';
 
 import './results.css';
-import { marked } from 'marked';
 
 export const Results = () => {
   const { shuffleQuestions, userAnswers } = useContext(QuizContext);
   return (
-    <article className="results">
+    <section className="results">
       {shuffleQuestions.map((question, i) => (
         <article className="quiz" key={question.id}>
           <h3>Pregunta {i + 1}</h3>
@@ -38,6 +38,6 @@ export const Results = () => {
           ></p>
         </article>
       ))}
-    </article>
+    </section>
   );
 };

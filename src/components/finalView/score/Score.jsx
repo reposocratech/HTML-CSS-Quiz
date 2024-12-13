@@ -15,15 +15,15 @@ export const Score = () => {
       ? '¡Buen intento!'
       : '¡Sigue practicando!';
   return (
-    <div className="score">
-      <h2>¡Quiz terminado!</h2>
-      <p>{message}</p>
+    <section className="score">
+      <h2 className="message">{message}</h2>
       <p>
-        Tu puntuación: {score} de {shuffleQuestions.length} (
-        {percentage.toFixed()}%)
+        Has contestado {score} preguntas correctamente de un total de{' '}
+        {shuffleQuestions.length}, consiguiendo un porcentaje de acierto de (
+        {percentage.toFixed()}%).
       </p>
       <button onClick={() => setShowResults(true)}>Ver resultados</button>
       <button onClick={handleRestart}>Jugar de nuevo</button>
-    </div>
+    </section>
   );
 };
