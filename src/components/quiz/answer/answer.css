@@ -16,6 +16,10 @@
     animation: vibrate 0.3s ease-in-out;
   }
 
+  &.cursor {
+    cursor: pointer;
+  }
+
   input {
     accent-color: var(--secondary-color);
   }

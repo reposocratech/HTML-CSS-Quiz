@@ -19,7 +19,9 @@ export const Answer = ({ option }) => {
       className={`
         answer 
         ${correctAnswer ? 'correct' : ''}
-        ${incorrectAnswer ? 'incorrect' : ''}`}
+        ${incorrectAnswer ? 'incorrect' : ''}
+        ${selectedOption === null ? 'cursor' : ''}
+      `}
     >
       <input
         type="radio"

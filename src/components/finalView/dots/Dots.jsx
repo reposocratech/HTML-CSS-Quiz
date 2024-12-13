@@ -9,14 +9,15 @@ export const Dots = () => {
   return (
     <div className="dots">
       {shuffleQuestions.map(({ id, correctAnswer }, i) => (
-        <span
+        <a
           key={id}
+          href={`#question-${i + 1}`}
           className={`dot ${
             correctAnswer === userAnswers[i] ? 'correct' : 'incorrect'
           }`}
         >
           {i + 1}
-        </span>
+        </a>
       ))}
     </div>
   );

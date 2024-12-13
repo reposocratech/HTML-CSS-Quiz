@@ -1,7 +1,7 @@
 .quiz {
   background-color: var(--primary-color);
   border-radius: 16px;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   box-shadow: 2px 2px 3px var(--secondary-color);
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import { questions } from '../data/questions';
 import confetti from 'canvas-confetti';
 
 export const QuizContextProvider = ({ children }) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(24);
   const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);

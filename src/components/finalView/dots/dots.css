@@ -1,16 +1,30 @@
 .dots {
+  background-color: #16074ebb;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 6px var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: 1rem;
+  padding: 0.75rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.6rem;
+  position: fixed;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: min(100%, 500px);
+  margin-inline: auto;
 
   .dot {
     display: grid;
     place-items: center;
-    width: 1.5rem;
+    width: 1.7rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
 
     &.correct {
       background-color: var(--correct-color);

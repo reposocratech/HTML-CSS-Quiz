@@ -13,9 +13,13 @@ export const FinalView = () => {
     <>
       <article className="quiz final-view">
         <Score />
-        <Dots />
       </article>
-      {showResults && <Results />}
+      {showResults && (
+        <>
+          <Results />
+          <Dots />
+        </>
+      )}
     </>
   );
 };

@@ -4,8 +4,13 @@ import { QuizContext } from '../../../context/QuizContext';
 import './score.css';
 
 export const Score = () => {
-  const { score, shuffleQuestions, handleRestart, setShowResults } =
-    useContext(QuizContext);
+  const {
+    score,
+    shuffleQuestions,
+    handleRestart,
+    setShowResults,
+    showResults,
+  } = useContext(QuizContext);
 
   const percentage = (score / shuffleQuestions.length) * 100;
   const message =
@@ -22,7 +27,12 @@ export const Score = () => {
         {shuffleQuestions.length}, consiguiendo un porcentaje de acierto de (
         {percentage.toFixed()}%).
       </p>
-      <button onClick={() => setShowResults(true)}>Ver resultados</button>
+      <button
+        onClick={() => setShowResults(true)}
+        hidden={showResults === true}
+      >
+        Ver resultados
+      </button>
       <button onClick={handleRestart}>Jugar de nuevo</button>
     </section>
   );
