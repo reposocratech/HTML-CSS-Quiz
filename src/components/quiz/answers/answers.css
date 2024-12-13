@@ -1,7 +1,5 @@
-@scope (.answers) {
-  :scope {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
+.answers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }

@@ -1,25 +1,23 @@
-@scope (.dots) {
-  :scope {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
+.dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
 
-    .dot {
-      display: grid;
-      place-items: center;
-      width: 1.5rem;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      font-size: 0.8rem;
+  .dot {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-size: 0.8rem;
 
-      &.correct {
-        background-color: var(--correct-color);
-      }
+    &.correct {
+      background-color: var(--correct-color);
+    }
 
-      &.incorrect {
-        background-color: var(--incorrect-color);
-      }
+    &.incorrect {
+      background-color: var(--incorrect-color);
     }
   }
 }

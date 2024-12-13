@@ -6,5 +6,9 @@ import { Quiz } from '../Quiz';
 export const Game = () => {
   const { completed } = useContext(QuizContext);
 
-  return <main>{completed ? <FinalView /> : <Quiz />}</main>;
+  return (
+    <main>
+      <div className="container">{completed ? <FinalView /> : <Quiz />}</div>
+    </main>
+  );
 };

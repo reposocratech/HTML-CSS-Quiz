@@ -1,45 +1,43 @@
-@scope (.info) {
-  :scope {
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  background-color: var(--info-color);
+  padding: 1rem;
+  border-radius: 16px;
+  opacity: 1;
+  interpolate-size: allow-keywords;
+  height: max-content;
+  overflow: clip;
+  transition: opacity 0.3s, height 0.3s;
+
+  @starting-style {
+    opacity: 0;
+    height: 0;
+  }
+
+  h3 {
     display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    background-color: var(--info-color);
-    padding: 1rem;
-    border-radius: 16px;
-    opacity: 1;
-    interpolate-size: allow-keywords;
-    height: max-content;
-    overflow: clip;
-    transition: opacity 0.3s, height 0.3s;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
 
-    @starting-style {
-      opacity: 0;
-      height: 0;
-    }
+  p {
+    width: 100%;
+  }
 
-    h3 {
-      display: flex;
-      align-items: center;
-      column-gap: 0.5rem;
-    }
+  code,
+  pre {
+    background-color: var(--option-color);
+    border-radius: 4px;
+  }
 
-    p {
-      width: 100%;
-    }
+  code {
+    padding: 0.125rem 0.25rem;
+  }
 
-    code,
-    pre {
-      background-color: var(--option-color);
-      border-radius: 4px;
-    }
-
-    code {
-      padding: 0.125rem 0.25rem;
-    }
-
-    pre {
-      padding: 10px;
-      overflow-x: auto;
-    }
+  pre {
+    padding: 10px;
+    overflow-x: auto;
   }
 }
