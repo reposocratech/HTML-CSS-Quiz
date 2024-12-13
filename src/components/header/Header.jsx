@@ -3,10 +3,12 @@ export const Header = () => {
     <header>
       <div className="container">
         <h1>
-          <div className="img">
-            <img src="./images/favicon.png" alt="Logo de HTML-CSS-QUIZ" />
-          </div>
-          HTML & CSS QUIZ
+          <img
+            className="img"
+            src="./images/favicon.png"
+            alt="Logo de HTML-CSS-QUIZ"
+          />
+          HTML - CSS QUIZ
         </h1>
       </div>
     </header>
