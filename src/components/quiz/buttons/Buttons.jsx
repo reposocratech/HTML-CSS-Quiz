@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { QuizContext } from '../../../context/QuizContext';
+import { IconArrowNarrowRightDashed } from '@tabler/icons-react';
+
 import './buttons.css';
 
 export const Buttons = () => {
@@ -13,6 +15,7 @@ export const Buttons = () => {
         disabled={selectedOption === null}
         onClick={handleNext}
       >
+        <IconArrowNarrowRightDashed stroke={2} />
         {currentQuestion === shuffleQuestions.length - 1
           ? 'Finalizar'
           : 'Siguiente'}
