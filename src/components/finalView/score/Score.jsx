@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { QuizContext } from '../../../context/QuizContext';
+import { IconReload, IconReportAnalytics } from '@tabler/icons-react';
 
 import './score.css';
 
@@ -19,6 +20,7 @@ export const Score = () => {
       : percentage >= 60
       ? '¡Buen intento!'
       : '¡Sigue practicando!';
+
   return (
     <article className="score">
       <h2 className="message">{message}</h2>
@@ -43,9 +45,13 @@ export const Score = () => {
           onClick={() => setShowResults(true)}
           hidden={showResults === true}
         >
+          <IconReportAnalytics stroke={2} />
           Ver resultados
         </button>
-        <button onClick={handleRestart}>Jugar de nuevo</button>
+        <button onClick={handleRestart}>
+          <IconReload stroke={2} />
+          Jugar de nuevo
+        </button>
       </div>
     </article>
   );
