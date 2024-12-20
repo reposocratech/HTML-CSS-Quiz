@@ -44,7 +44,8 @@ body {
 
 h1 {
   text-align: center;
-  margin-block: 1rem;
+  margin-block-start: 1rem;
+  margin-block-end: 2rem;
   font-size: clamp(2.5rem, calc(2rem + 1.333vw), 3rem);
   text-shadow: 2px 2px 3px var(--info-color);
   display: flex;
