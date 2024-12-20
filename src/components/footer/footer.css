@@ -1,7 +1,8 @@
 @scope (footer) {
   :scope {
     text-align: center;
-    padding: 1rem;
+    padding-block-end: 1rem;
+    padding-block-start: 2rem;
 
     p,
     a {
